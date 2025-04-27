@@ -81,14 +81,17 @@ public class Ecomapa {
     }
 
     private static void registrarUsuario() {
-        System.out.print("\nNombre: ");
+        System.out.print("\nRegistrar Usuario");
+        System.out.print("\nID: ");
+        String id = scanner.nextLine();
+        System.out.print("Nombre: ");
         String nombre = scanner.nextLine();
         System.out.print("Email: ");
         String email = scanner.nextLine();
         System.out.print("Contrasena: ");
         String contrasena = scanner.nextLine();
 
-        Usuario nuevoUsuario = new Usuario(nombre, email, contrasena);
+        Usuario nuevoUsuario = new Usuario(id, nombre, email, contrasena);
         usuarios.add(nuevoUsuario);
         System.out.println("Usuario registrado correctamente");
     }

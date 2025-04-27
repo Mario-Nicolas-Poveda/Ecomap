@@ -14,11 +14,10 @@ public class Usuario extends Entidad {
     private String nombre;
     private String email;
     private String contrasena;
-    private static int contadorUsuarios = 1;
 
-    public Usuario(String nombre, String email, String contrasena) {
+    public Usuario(String id, String nombre, String email, String contrasena) {
         super();
-        this.id = "USR-" + contadorUsuarios++;
+        this.id = id;
         this.nombre = nombre;
         this.email = email;
         this.contrasena = contrasena;
@@ -45,12 +44,15 @@ public class Usuario extends Entidad {
         return contrasena; 
     }
 
-    public static int getContadorUsuarios() {
-        return contadorUsuarios;
+    @Override
+    public String getId() {
+        return id;
     }
 
-    public static void setContadorUsuarios(int contadorUsuarios) {
-        Usuario.contadorUsuarios = contadorUsuarios;
+    public void setId(String id) {
+        this.id = id;
     }
+
+    
     
 }
